@@ -12,7 +12,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://YOUR_VERCEL_URL.vercel.app",
+      "https://booking-system-94w3.vercel.app",
     ],
     credentials: true,
   })
