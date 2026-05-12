@@ -51,7 +51,11 @@ export const getExpertById = async (req, res) => {
       });
     }
 
-    res.json(expert);
+    res.json({
+  experts,
+  totalPages,
+  currentPage: page,
+});
   } catch (error) {
     res.status(500).json({
       message: error.message,
