@@ -14,6 +14,7 @@ app.use(
       "http://localhost:5173",
       "https://booking-system-94w3.vercel.app",
     ],
+    methods: ["GET", "POST", "PATCH"],
     credentials: true,
   })
 );

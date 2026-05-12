@@ -15,14 +15,19 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: [
+      "http://localhost:5173",
+      "https://booking-system-94w3.vercel.app",
+    ],
+    methods: ["GET", "POST"],
+    credentials: true,
   },
 });
 
-// Make io available globally
+// Make io globally available
 app.set("io", io);
 
-// Socket Handler
+// Socket setup
 socketHandler(io);
 
 const PORT = process.env.PORT || 5000;
