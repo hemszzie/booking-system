@@ -6,8 +6,6 @@ import API from "../api/axios";
 
 import Navbar from "../components/Navbar";
 
-import socket from "../socket/socket";
-
 const ExpertDetails = () => {
   const { id } = useParams();
 
@@ -48,21 +46,6 @@ const ExpertDetails = () => {
     fetchExpert();
   }, []);
 
-  // Real-time slot updates
-  useEffect(() => {
-    socket.on("slotBooked", (data) => {
-      if (data.expertId === id) {
-        setBookedSlots((prev) => [
-          ...prev,
-          `${data.date}-${data.timeSlot}`,
-        ]);
-      }
-    });
-
-    return () => {
-      socket.off("slotBooked");
-    };
-  }, []);
 
   const handleBooking = async (e) => {
     e.preventDefault();
