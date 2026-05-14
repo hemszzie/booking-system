@@ -28,9 +28,9 @@ const Home = () => {
         `/experts?page=${currentPage}&search=${search}&category=${category}`
       );
 
-      setExperts(data);
+      setExperts(data.experts);
 
-      setTotalPages(1);
+      setTotalPages(data.totalPages);
 
       setLoading(false);
     } catch (error) {
