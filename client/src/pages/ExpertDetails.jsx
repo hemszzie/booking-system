@@ -58,14 +58,19 @@ const ExpertDetails = () => {
 
       toast.success("Booking Confirmed!");
 
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        date: "",
-        timeSlot: "",
-        notes: "",
-      });
+setBookedSlots((prev) => [
+  ...prev,
+  `${formData.date}-${formData.timeSlot}`,
+]);
+
+setFormData({
+  name: "",
+  email: "",
+  phone: "",
+  date: "",
+  timeSlot: "",
+  notes: "",
+});
     } catch (error) {
       toast.error(
         error.response?.data?.message ||
