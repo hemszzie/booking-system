@@ -1,7 +1,3 @@
-const socket = {
-  on: () => {},
-  off: () => {},
-  emit: () => {},
-};
+const socket = {};
 
 export default socket;
