@@ -12,7 +12,6 @@ export const createBooking = async (req, res) => {
       notes,
     } = req.body;
 
-    // Validation
     if (
       !expertId ||
       !name ||
@@ -26,7 +25,6 @@ export const createBooking = async (req, res) => {
       });
     }
 
-    // Create booking
     const booking = await Booking.create({
       expertId,
       name,
@@ -37,21 +35,11 @@ export const createBooking = async (req, res) => {
       notes,
     });
 
-    // Emit socket event
-    const io = req.app.get("io");
-
-    io.emit("slotBooked", {
-      expertId,
-      date,
-      timeSlot,
-    });
-
     res.status(201).json({
       message: "Booking successful",
       booking,
     });
   } catch (error) {
-    // Duplicate booking error
     if (error.code === 11000) {
       return res.status(409).json({
         message: "This slot is already booked",
