@@ -94,7 +94,7 @@ const Home = () => {
               Health
             </option>
 
-            <option value="marketing">
+            <option value="Marketing">
               Marketing
             </option>
 
