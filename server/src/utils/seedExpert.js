@@ -43,6 +43,66 @@ const experts = [
       },
     ],
   },
+
+  {
+    name: "Emily Davis",
+    category: "Tech",
+    experience: 6,
+    rating: 4.7,
+    bio: "Software development mentor",
+    
+    availableSlots: [
+      {
+        date: "2026-05-14",
+        slots: ["10:00 AM", "1:00 PM", "4:00 PM"],
+      },
+    ],
+  },
+
+  {
+    name: "Priya Mehta",
+    category: "Finance",
+    experience: 7,
+    rating: 4.5,
+    bio: "Financial advisor and investment consultant.",
+    
+    availableSlots: [
+      {
+        date: "2026-05-14",
+        slots: ["10:00 AM", "1:00 PM", "4:00 PM"],
+      },
+    ],
+  },
+
+  {
+    name: "john smith",
+    category: "Marketing",
+    experience: 8,
+    rating: 4.5,
+    bio: "Marketing strategist with 8 years of experience.",
+    
+    availableSlots: [
+      {
+        date: "2026-05-14",
+        slots: ["10:00 AM", "1:00 PM", "4:00 PM"],
+      },
+    ],
+  },
+
+  {
+    name: "Jenefier Doe",
+    category: "Health",
+    experience: 5,
+    rating: 4.5,
+    bio: "Experienced healthcare advisor specializing in fitness, mental well-being, and healthy living strategies.",
+    
+    availableSlots: [
+      {
+        date: "2026-05-14",
+        slots: ["10:00 AM", "1:00 PM", "4:00 PM"],
+      },
+    ],
+  },
 ];
 
 const seedData = async () => {
