@@ -78,7 +78,7 @@ const experts = [
     name: "john smith",
     category: "Marketing",
     experience: 8,
-    rating: 4.5,
+    rating: 4.0,
     bio: "Marketing strategist with 8 years of experience.",
     
     availableSlots: [
@@ -93,7 +93,7 @@ const experts = [
     name: "Jenefier Doe",
     category: "Health",
     experience: 5,
-    rating: 4.5,
+    rating: 4.2,
     bio: "Experienced healthcare advisor specializing in fitness, mental well-being, and healthy living strategies.",
     
     availableSlots: [

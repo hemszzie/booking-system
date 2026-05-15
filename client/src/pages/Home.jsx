@@ -81,6 +81,23 @@ const Home = () => {
             <option value="Career">
               Career
             </option>
+
+            <option value="Finance">
+              Finance
+            </option> 
+
+            <option value="Tech">
+              Tech
+            </option>
+
+            <option value="Health">
+              Health
+            </option>
+
+            <option value="marketing">
+              Marketing
+            </option>
+
           </select>
         </div>
 
